@@ -1,0 +1,17 @@
+{
+    "validation_timestamp": "2026-10-13T16:17:12.568889",
+    "total_records_evaluated": 4424,
+    "passed_records": 4424,
+    "rejected_records": 0,
+    "duplicates_removed": 0,
+    "quality_pass_rate_pct": 100.0,
+    "violation_summary": {
+        "Rule: student_id_not_null": 0,
+        "Rule: age_valid": 0,
+        "Rule: admission_grade_valid": 0,
+        "Rule: sem1_grade_valid": 0,
+        "Rule: sem2_grade_valid": 0,
+        "Rule: attendance_valid": 0,
+        "Rule: target_valid": 0
+    }
+}

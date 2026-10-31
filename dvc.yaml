@@ -1,0 +1,53 @@
+stages:
+  ingest:
+    cmd: python src/ingestion/ingestion_pipeline.py
+    deps:
+      - data.csv
+      - src/ingestion/ingest_uci.py
+      - src/ingestion/ingest_erp.py
+      - src/ingestion/ingest_lms.py
+    outs:
+      - data/raw/uci_student_raw.csv
+      - data/raw/erp_records_raw.csv
+      - data/raw/lms_logs_raw.csv
+      - data/raw/ingestion_summary.json
+
+  etl_and_warehouse:
+    cmd: python src/etl/etl_pipeline.py
+    deps:
+      - data/raw/uci_student_raw.csv
+      - data/raw/erp_records_raw.csv
+      - data/raw/lms_logs_raw.csv
+      - src/etl/validator.py
+      - src/etl/transformer.py
+      - database/schema.sql
+    outs:
+      - data/staging/staged_student_data.csv
+      - data/cleaned/cleaned_students.csv
+      - data/cleaned/rejected_records.csv
+      - data/cleaned/validation_report.json
+      - data/analytical/student_analytical_mart.csv
+      - database/student_warehouse.db
+
+  train_models:
+    cmd: python src/mlops/train.py
+    deps:
+      - data/analytical/student_analytical_mart.csv
+      - src/mlops/feature_store.py
+      - src/mlops/evaluate.py
+      - src/mlops/train.py
+    outs:
+      - models/best_model.joblib
+      - models/preprocessor.joblib
+    metrics:
+      - models/model_metadata.json:
+          cache: false
+
+  drift_monitor:
+    cmd: python src/mlops/monitoring.py
+    deps:
+      - data/analytical/student_analytical_mart.csv
+      - src/mlops/monitoring.py
+    metrics:
+      - reports/drift_monitoring_report.json:
+          cache: false

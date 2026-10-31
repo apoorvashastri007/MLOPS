@@ -1,0 +1,184 @@
+{
+    "model_name": "XGBoost",
+    "trained_at": "2026-10-13T16:17:21.885987",
+    "framework": "xgboost.sklearn",
+    "champion_test_metrics": {
+        "test_accuracy": 0.8886,
+        "test_precision": 0.8528,
+        "test_recall": 0.7887,
+        "test_f1": 0.8195,
+        "test_roc_auc": 0.9407,
+        "test_confusion_matrix": [
+            [
+                422,
+                29
+            ],
+            [
+                45,
+                168
+            ]
+        ],
+        "classification_report": {
+            "0": {
+                "precision": 0.9036402569593148,
+                "recall": 0.9356984478935698,
+                "f1-score": 0.9193899782135077,
+                "support": 451.0
+            },
+            "1": {
+                "precision": 0.8527918781725888,
+                "recall": 0.7887323943661971,
+                "f1-score": 0.8195121951219512,
+                "support": 213.0
+            },
+            "accuracy": 0.8885542168674698,
+            "macro avg": {
+                "precision": 0.8782160675659518,
+                "recall": 0.8622154211298835,
+                "f1-score": 0.8694510866677294,
+                "support": 664.0
+            },
+            "weighted avg": {
+                "precision": 0.8873289547280307,
+                "recall": 0.8885542168674698,
+                "f1-score": 0.8873508700832342,
+                "support": 664.0
+            }
+        }
+    },
+    "champion_val_metrics": {
+        "val_accuracy": 0.8855,
+        "val_precision": 0.8632,
+        "val_recall": 0.7664,
+        "val_f1": 0.8119,
+        "val_roc_auc": 0.9214,
+        "val_confusion_matrix": [
+            [
+                424,
+                26
+            ],
+            [
+                50,
+                164
+            ]
+        ],
+        "classification_report": {
+            "0": {
+                "precision": 0.8945147679324894,
+                "recall": 0.9422222222222222,
+                "f1-score": 0.9177489177489178,
+                "support": 450.0
+            },
+            "1": {
+                "precision": 0.8631578947368421,
+                "recall": 0.7663551401869159,
+                "f1-score": 0.8118811881188119,
+                "support": 214.0
+            },
+            "accuracy": 0.8855421686746988,
+            "macro avg": {
+                "precision": 0.8788363313346658,
+                "recall": 0.854288681204569,
+                "f1-score": 0.8648150529338648,
+                "support": 664.0
+            },
+            "weighted avg": {
+                "precision": 0.88440878771582,
+                "recall": 0.8855421686746988,
+                "f1-score": 0.883628896452468,
+                "support": 664.0
+            }
+        }
+    },
+    "hyperparameters": {
+        "n_estimators": 150,
+        "max_depth": 5,
+        "learning_rate": 0.08,
+        "subsample": 0.85
+    },
+    "top_features": [
+        {
+            "feature": "approval_rate_overall",
+            "importance": 0.18317
+        },
+        {
+            "feature": "course_name_Animation and Multimedia Design",
+            "importance": 0.12168
+        },
+        {
+            "feature": "tuition_fees_up_to_date_No",
+            "importance": 0.08371
+        },
+        {
+            "feature": "tuition_fees_up_to_date_Yes",
+            "importance": 0.04845
+        },
+        {
+            "feature": "sem2_approved",
+            "importance": 0.03484
+        },
+        {
+            "feature": "sem2_grade",
+            "importance": 0.03296
+        },
+        {
+            "feature": "sem1_enrolled",
+            "importance": 0.02763
+        },
+        {
+            "feature": "debtor_No",
+            "importance": 0.0245
+        },
+        {
+            "feature": "course_name_Basic Education",
+            "importance": 0.02169
+        },
+        {
+            "feature": "age_at_enrollment",
+            "importance": 0.02121
+        },
+        {
+            "feature": "scholarship_holder_Yes",
+            "importance": 0.01848
+        },
+        {
+            "feature": "sem2_enrolled",
+            "importance": 0.01823
+        },
+        {
+            "feature": "course_name_Equinculture",
+            "importance": 0.01774
+        },
+        {
+            "feature": "scholarship_holder_No",
+            "importance": 0.01772
+        },
+        {
+            "feature": "gender_Female",
+            "importance": 0.01768
+        }
+    ],
+    "all_model_comparison": {
+        "LogisticRegression": {
+            "test_accuracy": 0.8599,
+            "test_precision": 0.75,
+            "test_recall": 0.8451,
+            "test_f1": 0.7947,
+            "test_roc_auc": 0.9323
+        },
+        "RandomForest": {
+            "test_accuracy": 0.8705,
+            "test_precision": 0.7749,
+            "test_recall": 0.8404,
+            "test_f1": 0.8063,
+            "test_roc_auc": 0.9387
+        },
+        "XGBoost": {
+            "test_accuracy": 0.8886,
+            "test_precision": 0.8528,
+            "test_recall": 0.7887,
+            "test_f1": 0.8195,
+            "test_roc_auc": 0.9407
+        }
+    }
+}

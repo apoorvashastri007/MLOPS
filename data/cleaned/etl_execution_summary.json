@@ -1,0 +1,17 @@
+{
+    "pipeline": "Student Performance ETL Pipeline",
+    "timestamp": "2026-10-13T16:17:13.078977",
+    "duration_seconds": 0.72,
+    "status": "COMPLETED_SUCCESSFULLY",
+    "staged_count": 4424,
+    "clean_count": 4424,
+    "rejected_count": 0,
+    "database_table_counts": {
+        "dim_student": 4424,
+        "dim_course": 17,
+        "dim_demographics": 4424,
+        "dim_macro_economy": 4424,
+        "fact_student_performance": 4424,
+        "student_analytical_mart": 4424
+    }
+}

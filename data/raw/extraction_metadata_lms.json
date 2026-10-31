@@ -1,0 +1,9 @@
+{
+    "source": "Moodle LMS Activity Export",
+    "file_name": "lms_logs_raw.csv",
+    "extraction_timestamp": "2026-10-13T16:17:12.360149",
+    "status": "SUCCESS",
+    "row_count": 4424,
+    "col_count": 7,
+    "sha256": "5b16b2287d481e5c0fb8691765947f6ca02314127fdf130352df3cbf7637377c"
+}

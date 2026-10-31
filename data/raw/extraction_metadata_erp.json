@@ -1,0 +1,9 @@
+{
+    "source": "College ERP Database Export (Attendance & Internal Marks)",
+    "file_name": "erp_records_raw.csv",
+    "extraction_timestamp": "2026-10-13T16:17:12.338998",
+    "status": "SUCCESS",
+    "row_count": 4424,
+    "col_count": 7,
+    "sha256": "f5c476499cdcf5f69dcc642a374428245f48da5ededafcaa619093eac61c439b"
+}

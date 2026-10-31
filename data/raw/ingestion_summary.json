@@ -1,0 +1,28 @@
+{
+    "pipeline_name": "Multi-Source Student Data Ingestion",
+    "started_at": "2026-10-13T16:17:12.233054",
+    "completed_at": "2026-10-13T16:17:12.361233",
+    "duration_seconds": 0.13,
+    "status": "SUCCESS",
+    "sources_ingested": [
+        {
+            "source": "UCI Student Performance and Dropout Dataset",
+            "records": 4424,
+            "features": 37,
+            "target_file": "data/raw/uci_student_raw.csv"
+        },
+        {
+            "source": "College ERP Export",
+            "records": 4424,
+            "features": 7,
+            "target_file": "data/raw/erp_records_raw.csv"
+        },
+        {
+            "source": "Moodle LMS Activity Export",
+            "records": 4424,
+            "features": 7,
+            "target_file": "data/raw/lms_logs_raw.csv"
+        }
+    ],
+    "total_records_ingested": 4424
+}
